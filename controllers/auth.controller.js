@@ -36,7 +36,7 @@ import { decodeIdToken, generateCodeVerifier, generateState } from "arctic";
 import { google } from "../lib/oauth/google.js";
 import { OAUTH_EXCHANGE_EXPIRY } from "../config/constants.js";
 import { github } from "../lib/oauth/github.js";
-import { sendMail } from "../lib/nodemailer.js";
+import { sendMail } from "../lib/verify-email-using-resend.js";
 
 export const getRegisterPage = (req, res) => {
   if (req.user) return res.redirect("/");
