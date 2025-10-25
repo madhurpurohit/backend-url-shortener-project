@@ -14,51 +14,53 @@
   <body>
     <%- include("partials/header.ejs") %>
 
-    <div id="container">
-      <% if(user) { %>
-      <div class="status-badge success">
-        <i class="zmdi zmdi-check-circle"></i>
-        <span>You are logged In</span>
-      </div>
-      <% } else { %>
-      <div class="status-badge warning">
-        <i class="zmdi zmdi-alert-circle"></i>
-        <span>You are not logged In</span>
-      </div>
-      <% } %>
-
-      <h1>URL Shortener</h1>
-      <form action="/edit/<%= id %>" method="post">
-        <div class="input-div">
-          <label for="url">Enter URL:</label>
-          <input
-            type="url"
-            name="url"
-            id="url"
-            placeholder="Enter URL Here"
-            value="<%= url %>"
-            required
-          />
+    <main>
+      <div id="container">
+        <% if(user) { %>
+        <div class="status-badge success">
+          <i class="zmdi zmdi-check-circle"></i>
+          <span>You are logged In</span>
         </div>
-        <div class="input-div">
-          <label for="shortCode">Enter Short Code:</label>
-          <input
-            type="text"
-            name="shortCode"
-            id="shortCode"
-            placeholder="Enter Short Code Here"
-            value="<%= shortCode %>"
-            required
-          />
+        <% } else { %>
+        <div class="status-badge warning">
+          <i class="zmdi zmdi-alert-circle"></i>
+          <span>You are not logged In</span>
         </div>
+        <% } %>
 
-        <% if(errors && errors.length>0){ %> <% errors.forEach((error) => { %>
-        <p class="flash-error"><%= error %></p>
-        <% }) %> <% } %>
+        <h1>URL Shortener</h1>
+        <form action="/edit/<%= id %>" method="post">
+          <div class="input-div">
+            <label for="url">Enter URL:</label>
+            <input
+              type="url"
+              name="url"
+              id="url"
+              placeholder="Enter URL Here"
+              value="<%= url %>"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="shortCode">Enter Short Code:</label>
+            <input
+              type="text"
+              name="shortCode"
+              id="shortCode"
+              placeholder="Enter Short Code Here"
+              value="<%= shortCode %>"
+              required
+            />
+          </div>
 
-        <button type="submit">Update</button>
-      </form>
-    </div>
+          <% if(errors && errors.length>0){ %> <% errors.forEach((error) => { %>
+          <p class="flash-error"><%= error %></p>
+          <% }) %> <% } %>
+
+          <button type="submit">Update</button>
+        </form>
+      </div>
+    </main>
 
     <%- include("partials/footer.ejs") %>
   </body>
