@@ -600,7 +600,7 @@ export const getGithubLoginCallback = async (req, res) => {
     const { id: githubUserId, name, avatar_url: avatarUrl } = githubUser;
 
     const githubEmailResponse = await fetch(
-      "https.api.github.com/user/emails",
+      "https://api.github.com/user/emails",
       {
         headers: {
           Authorization: `Bearer ${token.accessToken()}`,
