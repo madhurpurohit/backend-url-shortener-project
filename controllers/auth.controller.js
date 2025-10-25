@@ -597,7 +597,7 @@ export const getGithubLoginCallback = async (req, res) => {
 
     const githubUser = await githubUserResponse.json();
 
-    const { id: githubUserId, name, avatar_url: avatarUrl } = githubUser;
+    const { id: githubUserId, name, login, avatar_url: avatarUrl } = githubUser;
 
     const githubEmailResponse = await fetch(
       "https://api.github.com/user/emails",
@@ -629,7 +629,7 @@ export const getGithubLoginCallback = async (req, res) => {
           avatarUrl,
         });
       } catch {
-        res.flash(
+        req.flash(
           "errors",
           "Email already exists, & Linked with another account. Please try again!"
         );
@@ -639,7 +639,7 @@ export const getGithubLoginCallback = async (req, res) => {
 
     if (!user) {
       user = await createUserWithOauth({
-        name,
+        name: name || login,
         email,
         provider: "github",
         providerAccountId: githubUserId,
