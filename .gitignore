@@ -4,3 +4,7 @@ node_modules
 ca.pem
 
 /generated/prisma
+
+
+URL-Shortener.session.sql
+URL-Shortener.users-Query.md
