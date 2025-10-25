@@ -60,23 +60,22 @@ You can view the live demo here: [https://devflux-url-shortener.onrender.com/](h
 
 Create a `.env` file in the root directory and add the following variables.
 
-```.env
-PORT=8000
-DATABASE_URL="mysql://<user>:<password>@<host>:<port>/<database>"
+```.env.example
+PORT=
+SECRET_KEY=
+FRONTEND_URL=
 
-# JWT
-JWT_SECRET="<your_jwt_secret>"
-JWT_EXPIRES_IN="1d"
+RESEND_API_KEY=
 
-# OAuth
-GITHUB_CLIENT_ID="<your_github_client_id>"
-GITHUB_CLIENT_SECRET="<your_github_client_secret>"
-GOOGLE_CLIENT_ID="<your_google_client_id>"
-GOOGLE_CLIENT_SECRET="<your_google_client_secret>"
-GOOGLE_REDIRECT_URI="http://localhost:8000/auth/google/callback"
+DATABASE_URL=
 
-# Resend
-RESEND_API_KEY="<your_resend_api_key>"
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+
+EMAIL_USER=
+EMAIL_PASSWORD=
 ```
 
 ## API Endpoints
