@@ -6,6 +6,8 @@ A backend service that takes a long URL and generates a unique short ID, which t
 
 You can view the live demo here: [https://devflux-url-shortener.onrender.com/](https://devflux-url-shortener.onrender.com/)
 
+![Pagination Image](./public/images/Pagination_Image.png)
+
 ## Key Features
 
 - **Secure & Fast Shortening:** Instantly generate a unique short link for any valid URL.
@@ -15,7 +17,10 @@ You can view the live demo here: [https://devflux-url-shortener.onrender.com/](h
 - **Social Logins:** Support for GitHub and Google OAuth.
 - **Custom URL:** User can create custom URL for their links.
 - **Link Management:** Users can view, edit, and delete their shortened links.
+- **Smart Link Sorting:** Links are automatically sorted to show the newest entries first, making management quick and intuitive.
 - **Profile Management:** Users can view and edit their profile information.
+- **Pagination:** Efficiently handles large number of links with a clean, paginated interface.
+- **Fully Responsive Design:** Seamless UX on all devices, tested down to 360px mobile width.
 
 ## Tech Stack
 

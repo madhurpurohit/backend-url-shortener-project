@@ -1067,6 +1067,7 @@ body:has(.form-container) {
   flex-direction: column;
   min-height: 100vh;
   align-items: center;
+  justify-items: center;
 }
 
 /* Dark mode variables for Form Pages */
